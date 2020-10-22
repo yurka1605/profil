@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
     <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/nice-select.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -37,6 +38,9 @@
                 </li>
             </ul>
             <button class="header__btn">Бесплатный замер</button>
+        </div>
+        <div class="header__menu-btn">
+            <img src="./img/menu.png" alt="menu">
         </div>
     </header>
     <main>
@@ -233,6 +237,14 @@
                     <div class="top__item_new">новинка!</div>
                     <div class="top__item_text">С трековым освещением</div>
                 </li>
+                <select class="select">
+                    <option value="1">Матовые</option>
+                    <option value="2">Сатиновые</option>
+                    <option value="3">Глянцевые</option>
+                    <option value="4">Двухуровневые</option>
+                    <option value="4">С теневым примыканием</option>
+                    <option value="4">С трековым освещением</option>
+                </select>
             </ul>
             <div class="top__images">
                 <div class="top__images_big">
@@ -520,7 +532,7 @@
                     </div>
                 </div>
                 <ul class="feedback__list">
-                    <li class="feedback__item">
+                    <li class="feedback__item active">
                         <div class="feedback__text">
                             Монтаж потолка в среднем занимает около 5 часов. На скорость работ влияют особенности выбранной конструкции, а также детали самого помещения. Естественно, многоуровневые натяжные потолки немного сложнее и дольше делать, чем одноуровневые.
                         </div>
@@ -570,6 +582,11 @@
                         </div>
                     </li>
                 </ul>
+                <ul class="feedback__points">
+                    <li class="feedback__point active"></li>
+                    <li class="feedback__point"></li>
+                    <li class="feedback__point"></li>
+                </ul>
             </div>
         </section>
         <section class="info">
@@ -615,7 +632,7 @@
                                 Строительный рынок предлагает большой выбор плинтусов для натяжного потолка. Вы можете подобрать подходящий цвет, форму 
                                 и материал, из которого он будет изготовлен.</div>
                         </li>
-                        <li class="info__item active">
+                        <li class="info__item">
                             <div class="info__title">
                                 <h4>Какой плинтус использовать для установки с натяжным потолком?</h4>
                                 <div class="info__icon"></div>
@@ -675,7 +692,7 @@
             <div class="footer__middle">
                 <div class="middle__list">
                         <ul class="footer__list">
-                            <h4 class="footer__list_title">О компании</h4>
+                            <h4 class="footer__list_title">О компании <span class="list-arrow"></span></h4>
                             <li class="footer__item"><a href="#">Фото</a></li>
                             <li class="footer__item"><a href="#">Цены</a></li>
                             <li class="footer__item"><a href="#">Отзывы</a></li>
@@ -685,7 +702,7 @@
                             <li class="footer__item"><a href="#">Контакты</a></li>
                         </ul>
                         <ul class="footer__list">
-                            <h4 class="footer__list_title">По фактуре</h4>
+                            <h4 class="footer__list_title">По фактуре <span class="list-arrow"></span></h4>
                             <li class="footer__item"><a href="#">Глянцевые</a></li>
                             <li class="footer__item"><a href="#">Матовые</a></li>
                             <li class="footer__item"><a href="#">Сатиновые</a></li>
@@ -694,7 +711,7 @@
                 </div>
                 <div class="middle__list">
                         <ul class="footer__list">
-                            <h4 class="footer__list_title">По назначению</h4>
+                            <h4 class="footer__list_title">По назначению <span class="list-arrow"></span></h4>
                             <li class="footer__item"><a href="#">В квартиру</a></li>
                             <li class="footer__item"><a href="#">В частный дом</a></li>
                             <li class="footer__item"><a href="#">В офис</a></li>
@@ -711,7 +728,7 @@
                 </div>
                 <div class="middle__list">
                     <ul class="footer__list">
-                        <h4 class="footer__list_title">По цвету</h4>
+                        <h4 class="footer__list_title">По цвету <span class="list-arrow"></span></h4>
                         <li class="footer__item"><a href="#">Белые</a></li>
                         <li class="footer__item"><a href="#">Чёрные</a></li>
                         <li class="footer__item"><a href="#">Красные</a></li>
@@ -728,7 +745,7 @@
                 <div class="middle__list">
                     <ul class="footer__list">
                         <h4 class="footer__list_title">Эксклюзивные
-                            решения</h4>
+                            решения <span class="list-arrow"></span></h4>
                         <li class="footer__item"><a href="#">Небо с облаками</a></li>
                         <li class="footer__item"><a href="#">С фотопечатью</a></li>
                         <li class="footer__item"><a href="#">Двухуровневые</a></li>
@@ -768,9 +785,42 @@
             </div>
         </ul>
     </footer>
+    <section class="mobile__menu">
+        <div class="menu__close">×</div>
+        <div class="header__logo">
+            <img src="./img/header-logo.png" alt="logo">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__list_item">Акции</li>
+                <li class="header__list_item active">Эксклюзив</li>
+                <li class="header__list_item">Продукция</li>
+                <li class="header__list_item">Услуги</li>
+                <li class="header__list_item">О компании</li>
+                <li class="header__list_item">Контакты</li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <ul class="header__socials">
+                <li class="header__social">
+                    <a href="#">
+                        <img src="./img/icon-inst.png" alt="instagram">
+                    </a>
+                </li>
+                <li class="header__social">
+                    <a href="#">
+                        <img src="./img/icon-vk.png" alt="vkontakte">
+                    </a>
+                </li>
+            </ul>
+            <a href="tel:+73912711212" class="header__number">+7 (391) 271-12-12</a>
+            <button class="header__btn">Бесплатный замер</button>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./js/jquery.ui.touch-punch.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.nice-select.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
