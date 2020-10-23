@@ -6,15 +6,17 @@
     box-sizing: border-box;
     transition: all .3s linear;
 }
-
+html {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.3;
     color: #000000;
-    overflow-x: hidden;
     background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
 a {
@@ -368,9 +370,10 @@ input[type="text"]::placeholder {
 }
 .calc__slider_title,
 .calc__item_title {
-    color: #c5c5c5;
+    color: #737373;
     font-size: 14px;
     margin-bottom: 14px;
+    font-weight: 500;
 }
 .calc__group:last-child {
     margin-top: 50px;
@@ -439,7 +442,7 @@ input[type="text"]::placeholder {
     line-height: 1;
     text-transform: uppercase;
     color: rgba(105, 19, 64, 255);
-    font-weight: 900;
+    font-weight: 800;
 }
 .top__images_big {
     position: relative;
@@ -492,6 +495,8 @@ input[type="text"]::placeholder {
     border: 0;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
 }
 .top__images_item {
     min-width: 100vw;
@@ -663,6 +668,8 @@ input[type="text"]::placeholder {
     border-radius: 4px;
     border: 0;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .feedback__head h2 {
@@ -706,6 +713,7 @@ input[type="text"]::placeholder {
     margin-right: 20px;
 }
 .feedback__text {
+    font-weight: 400;
     margin-bottom: 30px;
 }
 .feeback__author_name {
@@ -841,6 +849,8 @@ input[type="text"]::placeholder {
     border: 0;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 footer {
@@ -849,7 +859,7 @@ footer {
     color: #ffffff;
 }
 footer a {
-    color: #6e384b;
+    color: rgba(117, 117, 122, 255);
 }
 .footer__top {
     display: flex;
@@ -859,7 +869,7 @@ footer a {
     width: 170px;
 }
 .footer__left p {
-    color: #6e384b;
+    color: rgba(117, 117, 122, 255);
     margin-top: 32px;
 }
 .footer__middle {
@@ -887,21 +897,21 @@ footer a {
     width: 210px;
     height: 50px;
     color: #ffffff;
-    background-color: #571035;
+    background-color: #691340;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
     margin: 20px 0 30px 0;
 }
 .foooter__soc_title {
-    color: #6e384b;
+    color: rgba(117, 117, 122, 255);
     margin-bottom: 10px;
 }
 .footer__soc_links a {
     margin-right: 15px;
 }
 .footer__bottom_list {
-    border-top: 1px solid #6e384b;
+    border-top: 1px solid rgba(117, 117, 122, 255);
     padding: 30px 0;
     margin-top: 40px;
 }
@@ -1105,7 +1115,7 @@ footer a {
     }
     .banner__form {
         bottom: 30px;
-        top: auto;
+        top: inherit;
         left: 20px;
         height: fit-content;
         width: fit-content;
@@ -1348,7 +1358,11 @@ footer a {
         width: 100%;
     }
     .top__images_item img {
-        min-height: 500px;
+        object-fit: cover;
+        min-height: 100%;
+    }
+    .top__images_item {
+        height: 500px;
     }
     .top__price_old {
         font-size: 13px;
